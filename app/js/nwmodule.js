@@ -6,7 +6,7 @@
   /**
    * Creates a new instance of Module class which exposes public methods
    */
-  function Module() {
+  function NWModule() {
     return this;
   }
 
@@ -15,7 +15,7 @@
    *
    * @param {object} newModule the object containing the name, id, & object of the new module
    */
-  Module.prototype.register = function register(newModule) {
+  NWModule.prototype.register = function register(newModule) {
     if(newModule && !doesModuleExist(newModule.name)) {
       modules[newModule.name] = newModule.obj;
       return true;
@@ -30,7 +30,7 @@
    *
    * @param {string} name the name of the module being fetched
    */
-  Module.prototype.getModule = function getModule(name) {
+  NWModule.prototype.getModule = function getModule(name) {
     if(doesModuleExist(name)) {
       return modules[name];
     }
@@ -42,7 +42,7 @@
    * To get all registered modules
    *
    */
-  Module.prototype.getAllModules = function getAllModules() {
+  NWModule.prototype.getAllModules = function getAllModules() {
     return modules;
   };
 
@@ -51,12 +51,12 @@
    * To run all modules
    *
    */
-  Module.prototype.init = function init() {
+  NWModule.prototype.init = function init() {
     var key;
 
     for(key in modules) {
-      if(modules[key].hasOwnProperty('selector')
-          && modules[key].selector
+      if(modules[key].hasOwnProperty('element')
+          && modules[key].element
           && modules[key].hasOwnProperty('init')
           && modules[key].init) {
         modules[key].init();
@@ -79,5 +79,5 @@
   }
 
   window.app = window.app || {};
-  window.app.Module =  Module;
+  window.app.NWModule =  NWModule;
 })(window);

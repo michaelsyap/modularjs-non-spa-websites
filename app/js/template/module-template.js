@@ -1,8 +1,8 @@
 (function(window) {
   'use strict';
 
-  var appModule = new app.Module();
-  var helpers = appModule.getModule('helpers');
+  var NWModule = new app.NWModule();
+  var helpers = NWModule.getModule('helpers');
   var module;
   var settings = {
   };
@@ -39,13 +39,12 @@
   }
 
   module =  {
-    selector: document.getElementById('id-here'),
-    settings: settings,
+    element: document.getElementById('id-here'),
     init: init
   };
 
 
-  appModule.register({
+  NWModule.register({
     name: 'name-of-module',
     obj: module
   });
