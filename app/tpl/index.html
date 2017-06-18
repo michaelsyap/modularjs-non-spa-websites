@@ -1,38 +1,38 @@
 @@include('./global/header.html')
-<div class="container">
-  <h1 class="text-center">Modular JS Non-SPA Websites Demo</h1>
-  <p class="text-center">These are some basic demonstration of how we achieved to modularize our javascript using the module pattern</p>
-
-  <div class="row">
-
-        <div class="col-xs-18 col-sm-6 col-md-4">
-          <div class="thumbnail">
-              <div class="caption">
-                <h4>Color Switch Background Demo</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            </div>
+<div class="container -narrow">
+  <h1 class="text-center">Todo List Example</h1>
+  <form id="todo-form">
+    <div class="row">
+      <div class="col-md-12">
+        <input type="text" class="form-control input-lg" id="todo-item-name" placeholder="Your Todo Item Here...">
+      </div>
+    </div>
+  </form>
+  <div id="todo-list" class="todo-list">
+    <div class="row">
+      <div class="col-md-12">
+        <ul id="todo-list-container" class="list-group checked-list-box">
+          <li class="list-group-item">
+            <span>Todo Item Here</span>
+          </li>
+        </ul>
+      </div>
+    </div>
+    <div class="row">
+      <div class="col-md-12">
+        <div id="todo-list-switcher" class="btn-group btn-group-justified" role="group" aria-label="...">
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary list-category active" data-category="all">All</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary list-category" data-category="active">Active</button>
+          </div>
+          <div class="btn-group" role="group">
+            <button type="button" class="btn btn-primary list-category" data-category="done">Done</button>
           </div>
         </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-4">
-          <div class="thumbnail">
-              <div class="caption">
-                <h4>Todo List Demo</h4>
-                <p>A sample of creating separate modules for each components of the simple todo list app.</p>
-                <a href="todo-list.html" class="btn btn-success btn-block">Go to Demo</a>
-            </div>
-          </div>
-        </div>
-
-        <div class="col-xs-18 col-sm-6 col-md-4">
-          <div class="thumbnail">
-              <div class="caption">
-                <h4>Basic Website Demo</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Facere, soluta, eligendi doloribus sunt minus amet sit debitis repellat. Consectetur, culpa itaque odio similique suscipit</p>
-            </div>
-          </div>
-        </div>
-
+      </div>
+    </div>
   </div>
 </div>
 @@include('./global/footer.html')

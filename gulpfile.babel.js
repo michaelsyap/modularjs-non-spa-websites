@@ -54,6 +54,10 @@ gulp.task('uncss', function() {
             html: ['app/*.html'],
             ignore: [
                 '.fa',
+                /(#|\.)todo(\-[a-zA-Z]+)?/,
+                /(#|\.)btn(\-[a-zA-Z]+)?/,
+                /(#|\.)pull(\-[a-zA-Z]+)?/,
+                /(#|\.)fa(\-[a-zA-Z]+)?/,
                 /(#|\.)active(\-[a-zA-Z]+)?/,
                 /(#|\.)current-menu-item(\-[a-zA-Z]+)?/,
                 /(#|\.)selectboxit(\-[a-zA-Z]+)?/,
