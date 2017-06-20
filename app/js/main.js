@@ -1,7 +1,7 @@
 (function($, window, document){
   'use strict';
 
-  var module = new app.Module();
+  var module = new app.NWModule();
 
   document.addEventListener('DOMContentLoaded', function(e){
     module.init();
