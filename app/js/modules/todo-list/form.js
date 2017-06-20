@@ -2,7 +2,6 @@
   'use strict';
 
   var NWModule = new app.NWModule();
-  var helpers = NWModule.getModule('helpers');
   var model = NWModule.getModule('todo-model');
   var list = NWModule.getModule('todo-list');
   var module;

@@ -2,7 +2,6 @@
   'use strict';
 
   var NWModule = new app.NWModule();
-  var helpers = NWModule.getModule('helpers');
   var module;
   var settings = {
     todoItems: []
