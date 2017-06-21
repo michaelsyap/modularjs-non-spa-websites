@@ -55,8 +55,9 @@
     var key;
 
     for(key in modules) {
+
       if(modules[key].hasOwnProperty('element')
-          && modules[key].element
+          && doesElementExist(modules[key].element)
           && modules[key].hasOwnProperty('init')
           && modules[key].init) {
         modules[key].init();
@@ -65,6 +66,21 @@
 
 
   };
+
+
+  /**
+   * Checks if element exists
+   */
+  function doesElementExist(element) {
+
+    if(element instanceof jQuery && element.length > 0)
+      return true;
+
+    if(!(element instanceof jQuery) && element)
+      return true;
+
+    return false;
+  }
 
 
   /**
