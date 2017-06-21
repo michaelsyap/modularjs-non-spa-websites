@@ -33,9 +33,9 @@ Installation Instructions:
 	gulp serve
 	```
 
-4. Visit the todo app in your web browser `http://localhost:9000
+4. Visit the todo app in your web browser http://localhost:9000
 
-
+5. If you want to check the source files for javascript, you can go to `/app/js`
 
 If you have questions, you can send send me message in my twitter:  [@michaelsyap](https://twitter.com/michaelsyap)
 
